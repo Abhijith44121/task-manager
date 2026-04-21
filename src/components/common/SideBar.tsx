@@ -5,11 +5,10 @@ import { useState } from "react"
 
 export default function Sidebar() {
   const router = useRouter()
-  const searchParams = useSearchParams()
-
+const searchParams = typeof window !== "undefined" ? useSearchParams() : null
   const [open, setOpen] = useState(false)
 
-  const currentFilter = searchParams.get("filter") || "all"
+const currentFilter = searchParams?.get("filter") || "all"
 
   const navigate = (filter: string) => {
     router.push(`/dashboard?filter=${filter}`)
