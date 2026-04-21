@@ -32,7 +32,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* 🔹 Mobile Top Bar */}
       <div className="md:hidden flex items-center justify-between p-4 bg-white border-b">
         <h1 className="font-semibold text-gray-800">Task Manager</h1>
 
@@ -44,13 +43,11 @@ export default function Sidebar() {
         </button>
       </div>
 
-      {/* 🔹 Sidebar */}
       <div
         className={`fixed md:static top-0 left-0 h-screen w-64 bg-white border-r flex flex-col z-50 transform ${
           open ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition duration-300`}
       >
-        {/* 🔹 TOP (flex-1 pushes bottom down) */}
         <div className="flex-1 p-5 space-y-6 overflow-y-auto">
           <h1 className="text-xl font-bold text-gray-800 hidden md:block">
             Task Manager
@@ -81,7 +78,6 @@ export default function Sidebar() {
           </nav>
         </div>
 
-        {/* 🔹 BOTTOM (always stays at bottom) */}
         <div className="p-5 border-t">
           <button
             onClick={handleLogout}
@@ -92,7 +88,6 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* 🔹 Overlay (mobile only) */}
       {open && (
         <div
           className="fixed inset-0 bg-black/30 md:hidden z-40"

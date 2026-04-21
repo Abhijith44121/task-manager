@@ -18,7 +18,6 @@ export default function TaskStats() {
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
-      {/* Total */}
       <div className={cardStyle}>
         <p className="text-xs sm:text-sm text-gray-500">Total Tasks</p>
         <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
@@ -26,7 +25,6 @@ export default function TaskStats() {
         </h2>
       </div>
 
-      {/* Todo */}
       <div className={cardStyle}>
         <p className="text-xs sm:text-sm text-gray-500">Todo</p>
         <h2 className="text-xl sm:text-2xl font-bold text-gray-700">
@@ -34,7 +32,6 @@ export default function TaskStats() {
         </h2>
       </div>
 
-      {/* In Progress */}
       <div className={cardStyle}>
         <p className="text-xs sm:text-sm text-gray-500">In Progress</p>
         <h2 className="text-xl sm:text-2xl font-bold text-yellow-600">
@@ -42,7 +39,6 @@ export default function TaskStats() {
         </h2>
       </div>
 
-      {/* Completed */}
       <div className={cardStyle}>
         <p className="text-xs sm:text-sm text-gray-500">Completed</p>
         <h2 className="text-xl sm:text-2xl font-bold text-green-600">
@@ -50,7 +46,6 @@ export default function TaskStats() {
         </h2>
       </div>
 
-      {/* Due Today */}
       <div className={cardStyle}>
         <p className="text-xs sm:text-sm text-gray-500">Due Today</p>
         <h2 className="text-xl sm:text-2xl font-bold text-red-600">

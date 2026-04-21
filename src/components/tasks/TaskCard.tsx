@@ -35,17 +35,17 @@ export default function TaskCard({ task }: Props) {
 
     return (
         <div className="bg-white rounded-2xl shadow-md p-4 sm:p-5 space-y-3 border">
-            {/* Title */}
+            
             <h2 className="text-base sm:text-lg font-semibold text-gray-900">
                 {task.title}
             </h2>
 
-            {/* Description */}
+            
             <p className="text-sm text-gray-600 wrap-break-word">
                 {task.description || "No description"}
             </p>
 
-            {/* Status + Date */}
+        
             <div className="flex flex-wrap items-center gap-2 text-sm">
                 <span className={`px-3 py-1 rounded-full ${statusColor}`}>
                     {task.status}
@@ -56,7 +56,7 @@ export default function TaskCard({ task }: Props) {
                 </span>
             </div>
 
-            {/* Actions */}
+            
             <div className="flex flex-col sm:flex-row gap-2 pt-2">
                 <EditTaskModal task={task} />
 

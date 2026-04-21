@@ -17,7 +17,7 @@ import {
 export default function AddTaskModal() {
     const { addTask } = useTaskStore()
 
-    const [open, setOpen] = useState(false) // ✅ control modal
+    const [open, setOpen] = useState(false) 
 
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
@@ -42,7 +42,7 @@ export default function AddTaskModal() {
         setDescription("")
         setDueDate("")
 
-        setOpen(false) // ✅ close modal
+        setOpen(false) 
     }
 
     return (
@@ -61,7 +61,7 @@ export default function AddTaskModal() {
                 </DialogHeader>
 
                 <div className="space-y-4 mt-2">
-                    {/* Title */}
+                    
                     <input
                         type="text"
                         placeholder="Title"
@@ -70,7 +70,7 @@ export default function AddTaskModal() {
                         onChange={(e) => setTitle(e.target.value)}
                     />
 
-                    {/* Description */}
+                    
                     <textarea
                         placeholder="Description"
                         className="w-full border border-gray-300 bg-white text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
@@ -78,7 +78,7 @@ export default function AddTaskModal() {
                         onChange={(e) => setDescription(e.target.value)}
                     />
 
-                    {/* Date */}
+                
                     <input
                         type="date"
                         className="w-full border border-gray-300 bg-white text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
@@ -86,7 +86,7 @@ export default function AddTaskModal() {
                         onChange={(e) => setDueDate(e.target.value)}
                     />
 
-                    {/* Button */}
+            
                     <Button
                         onClick={handleSubmit}
                         className="w-full bg-black text-white hover:bg-gray-800 transition cursor-pointer"

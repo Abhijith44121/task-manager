@@ -41,7 +41,6 @@ export default function Dashboard() {
   return (
     <div className="space-y-6">
       
-      {/* ✅ HEADER */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
         
         <div>
@@ -54,10 +53,8 @@ export default function Dashboard() {
         <AddTaskModal />
       </div>
 
-      {/* ✅ STATS */}
       <TaskStats />
 
-      {/* ✅ FILTERS */}
       <div className="bg-white p-4 rounded-xl shadow-sm border">
         <TaskFilters
           search={search}
@@ -69,7 +66,6 @@ export default function Dashboard() {
         />
       </div>
 
-      {/* ✅ TASK GRID */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredTasks.length === 0 ? (
           <p className="text-gray-500">No tasks found</p>

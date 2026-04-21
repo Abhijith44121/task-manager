@@ -30,7 +30,7 @@ export default function TaskFilters({
 }: Props) {
     return (
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
-            {/* 🔎 Search */}
+          
             <div className="w-full sm:flex-1">
                 <Input
                     className="w-full bg-white text-black border-gray-300 placeholder:text-gray-500"
@@ -40,7 +40,6 @@ export default function TaskFilters({
                 />
             </div>
 
-            {/* 📌 Filter */}
             <div className="w-full sm:w-48">
                 <Select onValueChange={setStatus} value={status}>
                     <SelectTrigger className="w-full bg-white text-black cursor-pointer border-gray-300">
@@ -56,7 +55,6 @@ export default function TaskFilters({
                 </Select>
             </div>
 
-            {/* 📅 Sort */}
             <div className="w-full sm:w-48">
                 <Select onValueChange={setSort} value={sort}>
                     <SelectTrigger className="w-full bg-white text-black cursor-pointer border-gray-300">

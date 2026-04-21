@@ -42,7 +42,7 @@ export const useTaskStore = create<TaskStore>()(
         })),
     }),
     {
-      name: "task-storage", // key in localStorage
+      name: "task-storage", 
     }
   )
 )

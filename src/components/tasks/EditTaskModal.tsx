@@ -25,7 +25,7 @@ export default function EditTaskModal({ task }: Props) {
   const [description, setDescription] = useState(task.description)
   const [dueDate, setDueDate] = useState(task.dueDate)
 
-  // ✅ Sync latest task data when modal opens
+
   useEffect(() => {
     if (open) {
       setTitle(task.title)
@@ -69,7 +69,7 @@ export default function EditTaskModal({ task }: Props) {
         </DialogHeader>
 
         <div className="space-y-4 mt-2">
-          {/* Title */}
+         
           <input
             type="text"
             placeholder="Title"
@@ -78,7 +78,7 @@ export default function EditTaskModal({ task }: Props) {
             onChange={(e) => setTitle(e.target.value)}
           />
 
-          {/* Description */}
+       
           <textarea
             placeholder="Description"
             className="w-full border border-gray-300 bg-white text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
@@ -86,7 +86,7 @@ export default function EditTaskModal({ task }: Props) {
             onChange={(e) => setDescription(e.target.value)}
           />
 
-          {/* Date */}
+        
           <input
             type="date"
             className="w-full border border-gray-300 bg-white text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
@@ -94,7 +94,6 @@ export default function EditTaskModal({ task }: Props) {
             onChange={(e) => setDueDate(e.target.value)}
           />
 
-          {/* Button */}
           <Button
             onClick={handleUpdate}
             className="w-full bg-black text-white cursor-pointer hover:bg-gray-800 transition"

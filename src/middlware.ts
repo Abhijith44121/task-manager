@@ -6,12 +6,10 @@ export function middleware(request: NextRequest) {
 
     const isAuthPage = request.nextUrl.pathname.startsWith("/login")
 
-    // If not logged in → redirect to login
     if (!isLoggedIn && !isAuthPage) {
         return NextResponse.redirect(new URL("/login", request.url))
     }
 
-    // If logged in → prevent going back to login
     if (isLoggedIn && isAuthPage) {
         return NextResponse.redirect(new URL("/dashboard", request.url))
     }
